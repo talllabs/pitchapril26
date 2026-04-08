@@ -1,242 +1,271 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PNG Pitch Deck - Expanded Q&A</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>PNG Pitch Deck - Dark Mode, Minimal Text</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --png-blue: #004b87;
-            --png-gold: #f2a900;
-            --dark-charcoal: #333333;
-            --greyed-out: #a0aab2;
-            --light-bg: #f8f9fa;
+            --charcoal: #1a1a1a;
+            --yellow: #f2a900;
             --white: #ffffff;
+            --grey: #555555;
         }
 
         body {
-            background-color: #e2e6ea;
-            font-family: 'Open Sans', sans-serif;
+            background-color: #0a0a0a;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 40px 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 60px;
+            gap: 40px;
         }
 
-        /* Base Slide Styles - 16:9 Aspect Ratio */
+        /* Base Slide Styles */
         .slide {
             width: 960px;
             height: 540px;
-            background-color: var(--white);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            background-color: var(--charcoal);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             position: relative;
             overflow: hidden;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Montserrat', sans-serif;
-            margin-top: 0;
-            line-height: 1.3;
-        }
-
-        p, li {
-            line-height: 1.6;
-            color: var(--dark-charcoal);
-        }
-
-        /* Intro Slide */
-        .slide-intro {
-            background-color: var(--png-blue);
-            color: var(--white);
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 60px;
-        }
-        .slide-intro h1 {
-            color: var(--png-gold);
-            font-size: 42px;
-            margin-bottom: 20px;
-        }
-        .slide-intro p {
-            color: var(--white);
-            font-size: 24px;
-            font-weight: 400;
-            max-width: 800px;
-        }
-
-        /* Question Alone Slide */
-        .slide-q-only {
-            background-color: var(--png-gold);
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 60px;
-        }
-        .slide-q-only h1 {
-            color: var(--png-blue);
-            font-size: 52px;
-            margin: 0;
-        }
-
-        /* Answer Slide */
-        .slide-answer {
-            background-color: var(--white);
             padding: 60px 80px;
+        }
+
+        h1, h2, p {
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .highlight {
+            color: var(--yellow);
+            font-weight: 800;
+        }
+
+        /* Intro Slides */
+        .slide-center {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .slide-center h1 {
+            color: var(--white);
+            font-size: 48px;
+            font-weight: 600;
+        }
+
+        /* Question Only Slides */
+        .slide-q {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border: 8px solid var(--yellow);
+        }
+
+        .slide-q h1 {
+            color: var(--yellow);
+            font-size: 56px;
+            font-weight: 800;
+        }
+
+        /* Answer Slides */
+        .slide-a {
             justify-content: flex-start;
         }
-        
-        .greyed-question {
-            color: var(--greyed-out);
+
+        .grey-q {
+            color: var(--grey);
             font-size: 32px;
-            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            margin-bottom: auto; /* Pushes the answer to the middle */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .answer-text {
+            color: var(--white);
+            font-size: 44px; /* Very close to the Question size */
             font-weight: 600;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #eaeaea;
-            padding-bottom: 15px;
-        }
-
-        .answer-content {
-            font-size: 26px; /* Font size much closer to the question */
-            color: var(--dark-charcoal);
-        }
-
-        .answer-content strong {
-            color: var(--png-blue);
-        }
-
-        .answer-content ul {
-            padding-left: 25px;
-            margin-top: 15px;
-        }
-
-        .answer-content li {
-            margin-bottom: 15px;
+            margin-bottom: auto;
         }
 
     </style>
 </head>
 <body>
 
-    <!-- Intro Slide -->
-    <div class="slide slide-intro">
-        <h1>Stepping Into Your Shoes</h1>
-        <p>"Since we have worked with over 40 destinations, we know how it feels to be in your chairs."</p>
-        <p style="margin-top: 30px; font-style: italic;">So, if we were PNG, here are the questions we would ask...</p>
+    <!-- PREMISE -->
+    <div class="slide slide-center">
+        <h1>Since we have worked with over 40 destinations...</h1>
     </div>
 
-    <!-- Q1 -->
-    <div class="slide slide-q-only">
+    <div class="slide slide-center">
+        <h1>...we know exactly how it feels to be <span class="highlight">sitting in your chairs.</span></h1>
+    </div>
+
+    <div class="slide slide-center">
+        <h1 style="color: var(--yellow);">So, if we were PNG, here are the questions we would ask.</h1>
+    </div>
+
+    <!-- QUESTION 1 -->
+    <div class="slide slide-q">
         <h1>What experience do you have?</h1>
     </div>
 
-    <!-- A1 -->
-    <div class="slide slide-answer">
-        <div class="greyed-question">What experience do you have?</div>
-        <div class="answer-content">
-            <p>We’ve been telling travel stories for over <strong>20 years</strong>. Instead of just making standard ads, we create brands that travelers actually connect with.</p>
-            <p>We did this successfully for Thailand with the 'Find Your Spirit' campaign, and we've already done it for PNG with <strong>'Think You've Seen It All?'</strong></p>
-            <p>Between our team members, we’ve guided the branding and positioning for over 100 destinations worldwide.</p>
-        </div>
+    <div class="slide slide-a">
+        <div class="grey-q">What experience do you have?</div>
+        <div class="answer-text">We’ve been telling travel stories for <span class="highlight">over 20 years.</span></div>
     </div>
 
-    <!-- Q2 -->
-    <div class="slide slide-q-only">
+    <div class="slide slide-a">
+        <div class="grey-q">What experience do you have?</div>
+        <div class="answer-text">Instead of just making ads, we create <span class="highlight">brands that travelers actually connect with.</span></div>
+    </div>
+
+    <div class="slide slide-a">
+        <div class="grey-q">What experience do you have?</div>
+        <div class="answer-text">We did this for Thailand, and we've already done it for PNG with <span class="highlight">'Think You've Seen It All?'</span></div>
+    </div>
+
+    <!-- QUESTION 2 -->
+    <div class="slide slide-q">
         <h1>What makes you different?</h1>
     </div>
 
-    <!-- A2 -->
-    <div class="slide slide-answer">
-        <div class="greyed-question">What makes you different?</div>
-        <div class="answer-content">
-            <p>Most agencies fly in, guess what you need, and fly out. <strong>We already know the ground.</strong></p>
-            <p>We combine a top-tier Australian creative team with real, hard-earned knowledge of Papua New Guinea.</p>
-            <p>Our leadership has been to PNG <strong>16 times</strong> and spent <strong>7 years</strong> representing the TPA internationally. Because of this, we build tools your local operators can actually use, not just pretty pictures.</p>
-        </div>
+    <div class="slide slide-a">
+        <div class="grey-q">What makes you different?</div>
+        <div class="answer-text">Most agencies fly in, guess what you need, and fly out.</div>
     </div>
 
-    <!-- Q3 -->
-    <div class="slide slide-q-only">
+    <div class="slide slide-a">
+        <div class="grey-q">What makes you different?</div>
+        <div class="answer-text"><span class="highlight">We already know the ground.</span></div>
+    </div>
+
+    <div class="slide slide-a">
+        <div class="grey-q">What makes you different?</div>
+        <div class="answer-text">Our leadership has been to PNG <span class="highlight">16 times</span> and spent <span class="highlight">7 years</span> representing the TPA.</div>
+    </div>
+
+    <div class="slide slide-a">
+        <div class="grey-q">What makes you different?</div>
+        <div class="answer-text">Because of this, we build tools your <span class="highlight">local operators can actually use.</span> Not just pretty pictures.</div>
+    </div>
+
+    <!-- QUESTION 3 -->
+    <div class="slide slide-q">
         <h1>What are the deliverables?</h1>
     </div>
 
-    <!-- A3 -->
-    <div class="slide slide-answer">
-        <div class="greyed-question">What are the deliverables?</div>
-        <div class="answer-content">
-            <p>You get a complete, ready-to-use brand toolkit. Specifically, we will hand over:</p>
-            <ul>
-                <li>A fresh <strong>visual identity</strong> (colors, fonts, logos, and imagery style).</li>
-                <li>Clear <strong>brand guidelines</strong> so local operators know exactly how to use it.</li>
-                <li>A <strong>messaging playbook</strong> that tells your story perfectly to the world.</li>
-                <li>A <strong>PR and media plan</strong> guiding how to pitch PNG to journalists and influencers.</li>
-            </ul>
-        </div>
+    <div class="slide slide-a">
+        <div class="grey-q">What are the deliverables?</div>
+        <div class="answer-text">You get a <span class="highlight">complete, ready-to-use</span> brand toolkit.</div>
     </div>
 
-    <!-- Q4 -->
-    <div class="slide slide-q-only">
+    <div class="slide slide-a">
+        <div class="grey-q">What are the deliverables?</div>
+        <div class="answer-text">1. A fresh <span class="highlight">visual identity</span> (colors, fonts, logos).</div>
+    </div>
+
+    <div class="slide slide-a">
+        <div class="grey-q">What are the deliverables?</div>
+        <div class="answer-text">2. Clear <span class="highlight">brand guidelines</span> so your operators know how to use it.</div>
+    </div>
+
+    <div class="slide slide-a">
+        <div class="grey-q">What are the deliverables?</div>
+        <div class="answer-text">3. A <span class="highlight">messaging playbook</span> and PR plan to pitch PNG to the world.</div>
+    </div>
+
+    <!-- QUESTION 4 -->
+    <div class="slide slide-q">
         <h1>Tell us about the process.</h1>
     </div>
 
-    <!-- A4 -->
-    <div class="slide slide-answer">
-        <div class="greyed-question">Tell us about the process.</div>
-        <div class="answer-content">
-            <p>We don't guess; we research first. The project takes about <strong>12 weeks</strong> for Phase 1:</p>
-            <ul>
-                <li><strong>Weeks 1-8:</strong> We audit your current brand and interview up to 30 local and international stakeholders to see what’s working and what isn't.</li>
-                <li><strong>Weeks 9-12:</strong> We design the new strategy, the visual identity, and the rollout rules.</li>
-                <li><strong>Phase 2 (Post-Approval):</strong> We take that new brand and turn it into a global PR and communications framework for your international markets.</li>
-            </ul>
-        </div>
+    <div class="slide slide-a">
+        <div class="grey-q">Tell us about the process.</div>
+        <div class="answer-text">We don't guess; we research first. The build takes about <span class="highlight">12 weeks.</span></div>
     </div>
 
-    <!-- Q5 -->
-    <div class="slide slide-q-only">
+    <div class="slide slide-a">
+        <div class="grey-q">Tell us about the process.</div>
+        <div class="answer-text"><span class="highlight">Weeks 1-8:</span> We audit your brand and interview up to 30 stakeholders to see what’s working.</div>
+    </div>
+
+    <div class="slide slide-a">
+        <div class="grey-q">Tell us about the process.</div>
+        <div class="answer-text"><span class="highlight">Weeks 9-12:</span> We design the new strategy, the visual identity, and the rollout rules.</div>
+    </div>
+
+    <div class="slide slide-a">
+        <div class="grey-q">Tell us about the process.</div>
+        <div class="answer-text"><span class="highlight">Phase 2:</span> We turn that new brand into a global PR framework for your international markets.</div>
+    </div>
+
+    <!-- QUESTION 5 -->
+    <div class="slide slide-q">
         <h1>Who will work on the project?</h1>
     </div>
 
-    <!-- A5 -->
-    <div class="slide slide-answer">
-        <div class="greyed-question">Who will work on the project?</div>
-        <div class="answer-content">
-            <p>You get a senior team custom-built for this exact job:</p>
-            <ul>
-                <li><strong>Justin Jamieson:</strong> Strategy Lead ensuring the creative hits business goals.</li>
-                <li><strong>Alan Merschen:</strong> Global tourism veteran who knows how to sell PNG to the world.</li>
-                <li><strong>Ally Stoltz LaBriola:</strong> Your boots-on-the-ground expert who already has deep, trusted relationships with your local operators.</li>
-                <li>Supported directly by our core creative, editorial, and production directors.</li>
-            </ul>
-        </div>
+    <div class="slide slide-a">
+        <div class="grey-q">Who will work on the project?</div>
+        <div class="answer-text">You get a senior team custom-built for <span class="highlight">this exact job.</span></div>
     </div>
 
-    <!-- Q6 -->
-    <div class="slide slide-q-only">
+    <div class="slide slide-a">
+        <div class="grey-q">Who will work on the project?</div>
+        <div class="answer-text"><span class="highlight">Justin Jamieson:</span> Strategy Lead ensuring the creative hits business goals.</div>
+    </div>
+
+    <div class="slide slide-a">
+        <div class="grey-q">Who will work on the project?</div>
+        <div class="answer-text"><span class="highlight">Alan Merschen:</span> Global tourism veteran who knows how to sell PNG to the world.</div>
+    </div>
+
+    <div class="slide slide-a">
+        <div class="grey-q">Who will work on the project?</div>
+        <div class="answer-text"><span class="highlight">Ally Stoltz LaBriola:</span> Your boots-on-the-ground expert with deep local relationships.</div>
+    </div>
+
+    <!-- QUESTION 6 -->
+    <div class="slide slide-q">
         <h1>Why is it so much money?</h1>
     </div>
 
-    <!-- A6 -->
-    <div class="slide slide-answer">
-        <div class="greyed-question">Why is it so much money?</div>
-        <div class="answer-content">
-            <p>Because we aren't cutting corners. The <strong>$345,000 investment</strong> covers the heavy lifting required to do this right.</p>
-            <p>It covers a massive amount of real work: facilitating 30 stakeholder workshops, analyzing global sentiment, and building a comprehensive brand system.</p>
-            <p>We aren't just giving you a nice presentation; we are building a <strong>fully functioning global communications framework</strong> designed to actually bring travelers to your shores.</p>
-        </div>
+    <div class="slide slide-a">
+        <div class="grey-q">Why is it so much money?</div>
+        <div class="answer-text">Because we aren't cutting corners.</div>
     </div>
 
-    <!-- Closing Slide -->
-    <div class="slide slide-intro" style="background-color: var(--dark-charcoal);">
-        <h1 style="font-size: 56px;">Let's tell the world your story.</h1>
-        <div style="margin-top: 30px; border-top: 3px solid var(--png-gold); width: 100px;"></div>
+    <div class="slide slide-a">
+        <div class="grey-q">Why is it so much money?</div>
+        <div class="answer-text">The investment covers the <span class="highlight">heavy lifting required</span> to do this right.</div>
+    </div>
+
+    <div class="slide slide-a">
+        <div class="grey-q">Why is it so much money?</div>
+        <div class="answer-text">Facilitating 30 stakeholder workshops. Analyzing global sentiment. Building a comprehensive system.</div>
+    </div>
+
+    <div class="slide slide-a">
+        <div class="grey-q">Why is it so much money?</div>
+        <div class="answer-text">We aren't just giving you a nice presentation.</div>
+    </div>
+
+    <div class="slide slide-a">
+        <div class="grey-q">Why is it so much money?</div>
+        <div class="answer-text">We are building a fully functioning framework designed to <span class="highlight">actually bring travelers to your shores.</span></div>
+    </div>
+
+    <!-- CLOSING -->
+    <div class="slide slide-center" style="border: 8px solid var(--white);">
+        <h1 style="font-size: 64px;">Let's tell the world <span class="highlight">your story.</span></h1>
     </div>
 
 </body>
