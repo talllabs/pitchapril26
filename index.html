@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNG Pitch Deck Mockup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --png-blue: #004b87;
+            --png-gold: #f2a900;
+            --dark-charcoal: #333333;
+            --white: #ffffff;
+        }
+
+        body {
+            background-color: #e9ecef;
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        /* Base Slide Styles - 16:9 Aspect Ratio */
+        .slide {
+            width: 960px;
+            height: 540px;
+            background-color: var(--white);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+
+        p, li {
+            line-height: 1.6;
+            font-size: 18px;
+            color: var(--dark-charcoal);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        /* Slide Header (for standard slides) */
+        .slide-header {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #888;
+            border-bottom: 1px solid #ddd;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .content-area {
+            padding: 40px;
+        }
+
+        /* Slide Layout: Hero (Title/Closing) */
+        .layout-hero {
+            background: linear-gradient(rgba(0, 75, 135, 0.7), rgba(0, 75, 135, 0.8)), url('https://images.unsplash.com/photo-1596701062970-136151f15892?q=80&w=1920&auto=format&fit=crop') center/cover;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px;
+        }
+        .layout-hero h1 {
+            font-size: 48px;
+            color: var(--png-gold);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        .layout-hero p {
+            color: var(--white);
+            font-size: 24px;
+            font-weight: 300;
+        }
+
+        /* Slide Layout: Dark Premise */
+        .layout-dark {
+            background-color: var(--png-blue);
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px;
+        }
+        .layout-dark h2 {
+            color: var(--png-gold);
+            font-size: 36px;
+        }
+        .layout-dark p {
+            color: var(--white);
+            font-size: 26px;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        /* Slide Layout: Split Screen (Editorial style) */
+        .layout-split {
+            display: flex;
+            height: 100%;
+        }
+        .split-image {
+            width: 40%;
+            background: url('https://images.unsplash.com/photo-1542157585-ef20bfcce579?q=80&w=800&auto=format&fit=crop') center/cover;
+        }
+        .split-image.img-2 {
+            background: url('https://images.unsplash.com/photo-1506501257497-20b13cf14d1d?q=80&w=800&auto=format&fit=crop') center/cover;
+        }
+        .split-content {
+            width: 60%;
+            padding: 60px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .split-content h3 {
+            font-size: 16px;
+            color: var(--png-blue);
+            margin-bottom: 10px;
+        }
+        .split-content h2 {
+            font-size: 32px;
+            color: var(--dark-charcoal);
+            border-bottom: 4px solid var(--png-gold);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+
+        /* Slide Layout: Grid (Team) */
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .team-member {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid var(--png-gold);
+        }
+        .team-member h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--png-blue);
+            margin: 0 0 5px 0;
+            font-size: 18px;
+        }
+        .team-member p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Slide 1: Title -->
+    <div class="slide layout-hero">
+        <h1>Destination & Corporate Brand Redevelopment</h1>
+        <p>Papua New Guinea Tourism Promotion Authority Pitch</p>
+        <div style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 20px;">
+            <p style="font-size: 16px; font-weight: 600; letter-spacing: 2px;">PRESENTED BY GRIN CREATIVE</p>
+        </div>
+    </div>
+
+    <!-- Slide 2: The Premise -->
+    <div class="slide layout-dark">
+        <h2>Stepping Into Your Shoes</h2>
+        <p>"Since we have worked with over 40 destinations, we know how it feels to be in your chairs."</p>
+        <p>So, if we were PNG, here are the exact questions we would be asking...</p>
+    </div>
+
+    <!-- Slide 3: Q1 -->
+    <div class="slide layout-split">
+        <div class="split-image"></div>
+        <div class="split-content">
+            <h3>QUESTION 01</h3>
+            <h2>What experience do you have?</h2>
+            <ul>
+                <li><strong>Decades of Storytelling:</strong> Over 20 years of dedicated tourism storytelling expertise.</li>
+                <li><strong>Award-Winning Campaigns:</strong> Delivered Thailand's 'Find Your Spirit' and PNG's own 'Think You've Seen It All?'</li>
+                <li><strong>Global Reach:</strong> Creators of <em>get lost Magazine</em>, reaching over 500,000 highly engaged global travellers.</li>
+                <li><strong>International Pedigree:</strong> Guided positioning for 100+ destinations worldwide, including British Virgin Islands and South African Tourism.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 4: Q2 -->
+    <div class="slide">
+        <div class="slide-header">
+            <span>Grin Creative x PNGTPA</span>
+            <span>Question 02</span>
+        </div>
+        <div class="content-area">
+            <h3 style="color: var(--png-blue); font-size: 16px;">QUESTION 02</h3>
+            <h2 style="font-size: 32px; border-bottom: 4px solid var(--png-gold); padding-bottom: 10px; display: inline-block;">What makes you different?</h2>
+            <div style="margin-top: 20px; font-size: 20px;">
+                <p><strong>Global Expertise Meets Local Reality.</strong></p>
+                <p>We blend an award-winning Australian creative team with deep, on-the-ground Papua New Guinea market knowledge.</p>
+                <p>Our strategy goes beyond conceptual design; we deliver a practical, adoptable brand system that local industry stakeholders can actually use.</p>
+                <p>Our leadership includes direct PNG experience, built through <strong>16 in-country visits</strong> and <strong>7 years of international representation</strong> for PNGTPA.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Q3 & Q4 -->
+    <div class="slide layout-split">
+        <div class="split-content" style="width: 50%;">
+            <h3>QUESTION 03</h3>
+            <h2 style="font-size: 24px;">What are the deliverables?</h2>
+            <ul style="font-size: 16px;">
+                <li>Differentiated brand strategy & visual identity</li>
+                <li>Comprehensive industry guidelines & rollout roadmap</li>
+                <li>Structured global messaging framework</li>
+                <li>Market-facing PR toolkit for media & influencers</li>
+            </ul>
+        </div>
+        <div class="split-content" style="width: 50%; background-color: var(--png-blue); color: white;">
+            <h3 style="color: var(--png-gold);">QUESTION 04</h3>
+            <h2 style="font-size: 24px; color: white; border-color: var(--png-gold);">Tell us about the process.</h2>
+            <ul style="font-size: 16px; color: white;">
+                <li style="color: white;"><strong>Phase 1:</strong> Discovery, brand audit, strategy development, creative design, and industry adoption framework.</li>
+                <li style="color: white;"><strong>Phase 2:</strong> Translating the brand into a global communications and PR strategy.</li>
+                <li style="color: white;"><em>Strictly evidence-based, rooted in sentiment analysis and extensive stakeholder consultation.</em></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 6: Q5 -->
+    <div class="slide">
+        <div class="slide-header">
+            <span>Grin Creative x PNGTPA</span>
+            <span>Question 05</span>
+        </div>
+        <div class="content-area">
+            <h3 style="color: var(--png-blue); font-size: 16px;">QUESTION 05</h3>
+            <h2 style="font-size: 32px;">Who will work on the project?</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h4>Justin Jamieson</h4>
+                    <p><strong>Project Lead & Strategy Director</strong><br>Overseeing the full brand strategy and creative alignment.</p>
+                </div>
+                <div class="team-member">
+                    <h4>Alan Merschen</h4>
+                    <p><strong>Senior Advisor</strong><br>Decades of global tourism marketing experience and deep history representing PNGTPA.</p>
+                </div>
+                <div class="team-member">
+                    <h4>Ally Stoltz LaBriola</h4>
+                    <p><strong>Stakeholder & International Strategy Lead</strong><br>Leveraging deep relationships with local operators and extensive in-country experience.</p>
+                </div>
+                <div class="team-member">
+                    <h4>Core Support Team</h4>
+                    <p><strong>Creative & Production</strong><br>Luke Fraser (Creative Director), Kate Gazzard (Editorial), and Ivan Valachovic (Production).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: Q6 -->
+    <div class="slide layout-dark" style="background-color: var(--dark-charcoal);">
+        <h3 style="color: var(--png-gold); font-size: 16px; font-family: 'Montserrat', sans-serif;">QUESTION 06</h3>
+        <h2 style="color: var(--white); margin-bottom: 20px;">Why is it so much money?</h2>
+        <p style="font-size: 22px; margin-bottom: 15px;"><strong>We are doing the heavy lifting for lasting impact.</strong></p>
+        <ul style="color: white; font-size: 18px;">
+            <li style="color: white;">The investment covers a rigorous national consultation program (up to 30 in-depth stakeholder sessions).</li>
+            <li style="color: white;">We aren't just delivering a logo; we are delivering a fully integrated, market-ready communications framework.</li>
+            <li style="color: white;">Ensures the brand is actively usable in the global market, not just a theoretical concept gathering dust.</li>
+        </ul>
+    </div>
+
+    <!-- Slide 8: Closing -->
+    <div class="slide layout-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1506501257497-20b13cf14d1d?q=80&w=1920&auto=format&fit=crop') center/cover;">
+        <h1 style="color: var(--white); font-size: 56px;">Let's tell the world your story.</h1>
+        <div style="margin-top: 30px; border-top: 3px solid var(--png-gold); width: 100px;"></div>
+    </div>
+
+</body>
+</html>
